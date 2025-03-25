@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="tabs">
+    <button class="tab-button active" data-tab="recorder">RECORDER</button>
+    <button class="tab-button" data-tab="options">OPTIONS</button>
+    <button class="tab-button" data-tab="history">HISTORY</button>
+  </div>
+  
+  <div id="recorder" class="tab-content active">
+    <button id="record">Record</button>
+    <canvas id="waveform"></canvas>
+    <button id="download" class="hidden">Download</button>
+    <button id="redo" class="hidden">Redo</button>
+  </div>
+  
+  <div id="options" class="tab-content hidden">
+    <p>Options content here.</p>
+  </div>
+  
+  <div id="history" class="tab-content hidden">
+    <p>History content here.</p>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

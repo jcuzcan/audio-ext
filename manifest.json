@@ -1,0 +1,14 @@
+{
+  "name": "Audio Recorder",
+  "description": "Records screen audio using getDisplayMedia.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "downloads"
+  ],
+  "action": {
+    "default_icon": "icons/record-icon.png",
+    "default_title": "Recorder",
+    "default_popup": "popup/main.html"
+  }
+}

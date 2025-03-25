@@ -1,0 +1,45 @@
+{
+  "description": "Records a tab's audio.",
+  "manifest_version": 3,
+  "name": "Audio Recorder",
+  "version": "1.0",
+
+  "permissions": [
+    "activeTab",
+    "downloads",
+    "storage"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "action": {
+    "default_icon": "icons/record-icon.png",
+    "theme_icons": [{
+        "light": "icons/record-icon.png",
+        "dark": "icons/record-icon.png",
+        "size": 32
+    }],
+    "default_title": "Recorder",
+    "default_popup": "popup/main.html"
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": ["images/*.jpg"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}

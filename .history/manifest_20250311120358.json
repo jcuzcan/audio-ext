@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Audio Recorder",
+  "version": "1.0",
+  "description": "Records a tab's audio.",
+
+  "permissions": [
+    "activeTab",
+    "downloads",
+    "storage",
+    "tabs",
+    "mediaCapture"
+  ],
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+
+  "browser_action": {
+    "default_icon": "icons/record-icon.png",
+    "default_title": "Recorder",
+    "default_popup": "popup/main.html"
+  },
+
+  "web_accessible_resources": [
+    "images/*.jpg"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+
+  "description": "Record's a tabs audio.",
+  "manifest_version": 2,
+  "name": "Audio Recorder",
+  "version": "1.0",
+
+  "permissions": [
+    "activeTab",
+    "downloads",
+    "storage",
+    "tabs"
+  ],
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "browser_action": {
+    "default_icon": "icons/record-icon.png",
+    "theme_icons": [{
+        "light": "icons/record-icon.png",
+        "dark": "icons/record-icon.png",
+        "size": 32
+    }],
+    "default_title": "Recorder",
+    "default_popup": "popup/main.html"
+  },
+
+  "web_accessible_resources": [
+    "images/*.jpg"
+  ]
+
+}
